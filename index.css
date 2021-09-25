@@ -1,0 +1,145 @@
+/*Index custom CSS file*/
+:root {
+  font-size: 16px;
+}
+
+/*Loader*/
+.loader {
+  margin-top: 300px;
+  border: 8px solid white;
+  border-radius: 50%;
+  border-top: 8px solid #00c3d9;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*tabs used in the Result section*/
+.tab {
+  background-color: #3eabef;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+  color: white;
+  font-size: 1.3em;
+}
+
+.active,
+.tab:hover {
+  cursor: pointer;
+  background-color: #2a86bf;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.navigation {
+  background-color: #E9ECEF;
+  color: black;
+}
+
+/*main-title i.e. 'iMDB'*/
+.main-title {
+  color: black;
+}
+
+.main-title:hover {
+  background-color: #bbbec1;
+}
+
+#Result_title {
+  font-size: 2em;
+}
+
+#Result_poster {
+  cursor: pointer;
+}
+
+/*Censor Ratings*/
+.rated {
+  font-family: 'Archivo Black';
+  font-size: 1.9rem;
+  float: right;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+#Basic-details {
+  cursor: pointer;
+}
+
+/*Ratings table info*/
+.info_name {
+  display: block;
+}
+
+#Result_year {
+  color: gray;
+}
+
+.info {
+  border-right: 1px solid black;
+}
+
+.Plot-Casting-details,
+.imdb-details-info,
+.others-details {
+  text-align: center;
+}
+
+.information-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.RatingsTable {
+  text-align: center;
+}
+
+.RatingsTable .Source {
+  border-right: 1px solid black;
+}
+
+.RatingsTable:first-child {
+  border-left: 1px solid black;
+}
+
+.website {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*Medium Devices*/
+
+@media screen and (max-width:768px) {
+  .info_name {
+    display: none;
+  }
+}
