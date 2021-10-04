@@ -1,0 +1,74 @@
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+ <meta charset="UTF-8">
+ <title> Trail@2 </title>
+ <link rel="stylesheet" href="main.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+<body>
+ <div class="container">
+ <div class="title"><center>Any suggestions are cordially welcome! </center></div>
+ <div class="content">
+ <form action="#">
+ <div class="user-details">
+ 
+ <div class="input-box">
+ <span class="details">Category</span>
+ <input type="text" >
+ </div>
+ <div1 class="input-box">
+ <span class="details">Description</span>
+ <input type="text">
+ </div> 
+ </div>
+ <div class="button">
+ <input type="submit" value="Update">
+ </div>
+ <div class="button">
+ <input type="submit" value="Cancel">
+ </div>
+ </form>
+ </div>
+ </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+ <meta charset="UTF-8">
+ <title>suggestion</title>
+ <link rel="stylesheet" href="main.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+<body>
+ <div class="container">
+ <div class="title"><center> Any suggestions are cordially welcome   </center></div>
+ <div class="content">
+    <form action="./givesuggestion.php" method="POST">
+ <div class="user-details">
+   <div class="input-box">
+      <span class="details">Movie</span>
+      <input type="text" placeholder="Enter movie name" name="movie" required>
+      </div>
+ <div class="input-box">
+ <span class="details">Category</span>
+ <input type="text" placeholder="Enter Category name" name="cate" required>
+ </div>
+ <div class="input-box">
+ <span class="details"></span>Description</span>
+ <input type="text" placeholder="Enter the Description" name = "desc" required>
+ </div>
+ </div>
+ <div class="button">
+ <input type="submit" value="Update">
+ </div>
+ <div class="button">
+    <input type="reset" value="Reset">
+    </div>
+ </form>
+ </div>
+ </div>
+</body>
+</html>

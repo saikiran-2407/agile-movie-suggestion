@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+ <meta charset="UTF-8">
+ <title> Register </title>
+ <link rel="stylesheet" href="main.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+<body>
+    <script>
+    
+        function validate(){
+           
+            var fullname = document.forms["myform"]["fullname"].value;
+            var id = document.forms["myform"]["id"].value;
+            var phonenumber = document.forms["myform"]["phonenumber"].value;
+            var password = document.forms["myform"]["password"].value;
+            
+
+            if(isNaN(id) || id < 1000 || id > 9999 || id == "" || id == null){
+                
+                swal("Invalid ID!", "Enter Valid 4 digit ID", "warning");
+                return false; 
+            }else if (password.length < 8 || password.search(/[a-z]/i) < 0 ||password.search(/[0-9]/) < 0){
+                swal("Invalid Password Type!", "Your password must be at least 8 characters,\n contain at least one letter and\n contain at least one digit.", "warning");
+               
+                return false;
+            }
+            else if( fullname == "" || fullname == null){
+                swal("Name cannot be empty");
+                return false;
+            }else if (phonenumber == "" || phonenumber == null || isNaN(phonenumber) || phonenumber.length > 10 || phonenumber.length < 10 ){
+                swal("Invalid Contact number!", "Enter a valid contact Number", "warning");
+                
+                return false;
+            }
+            else{
+                swal("Registered Successfully !!!");
+            }
+        }
+    </script>
+ <div class="container">
+ <div class="title"><center>Registration</center></div>
+ <div class="content">
+ <form action="register.php" method="POST">
+ <div class="user-details">
+ <div class="input-box">
+ <span class="details">Full Name</span>
+ <input type="text" placeholder="Enter your name" name="fullname" required>
+ </div>
+
+ <div class="input-box">
+ <span class="details">User ID</span>
+ <input type="text" placeholder="Enter user ID"  name="id" required>
+ </div>
+ <div class="input-box">
+ <span class="details">Phone Number</span>
+ <input type="text" placeholder="Enter your number" name="phonenumber" required>
+ </div>
+ <div class="input-box">
+ <span class="details">Password</span>
+ <input type="password" placeholder="Enter your password" name="password" required>
+ </div>
+ </div>
+ <div class="button">
+ <input type="submit" value="Register">
+ </div>
+<div class="input_field">
+    <label>Already a Customer ? </label>
+    <a href="login.html">Sign In</a>
+</div>
+ </form>
+ </div>
+ </div>
+</body>
+</html>
