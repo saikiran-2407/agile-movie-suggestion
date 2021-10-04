@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+     <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="input-box">
+    <span class="details">Search</span>
+    <input type="text" placeholder="Enter movie name" name=" " required>
+    </div>
+
+    <input id="search" type="text" placeholder="Search something" />
+    <button id="submit" type="button"> Submit
+    </button>
+    <iframe width="50%" height="500" id="iframe" src="">
+    </iframe>
+
+    <script>
+
+        let btn = document.getElementById("submit");
+        let search = document.getElementById("search");
+        let iframe = document.getElementById("iframe");
+
+        btn.addEventListener("click", (e) => {
+            const searchVal = search.value;
+
+            if (searchVal) {
+                iframe.setAttribute("src", `https://www.bing.com/search?q=${searchVal}`);
+            } else {
+                alert("enter something")
+            }
+        });
+
+    </script>
+</body>
+
+</html>
