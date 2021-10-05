@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+ <meta charset="UTF-8">
+ <title> AddProduct </title>
+ <link rel="stylesheet" href="main.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+<body>
+    <script>
+    
+        function validate(){
+            
+            var id = document.forms["myform"]["id"].value;
+            var description = document.forms["myform"]["description"].value;
+            var category = document.forms["myform"]["category"].value;
+            var stock = document.forms["myform"]["stock"].value;
+            var price = document.forms["myform"]["price"].value;
+            
+            if(isNaN(id) || id < 100000 || id > 999999 || id == "" || id == null){
+                
+                swal("Invalid ID!", "Enter Valid 6 digit ID", "warning");
+                return false; 
+            }else if (description == "" || description == null){
+                 swal("Description cannot be empty!!");
+                 return false;
+            }else if (category == "" || category == null){
+                 swal("Category cannot be empty!!");
+                 return false;
+            }else if (stock == "" || stock == null){
+                 swal("Stock cannot be empty!!");
+                 return false;
+            }else if (price == "" || price == null){
+                 swal("Price cannot be empty!!");
+                 return false;
+            }                
+            
+        }
+    </script>
+ <div class="container">
+ <div class="title"><center>Add product</center></div>
+ <div class="content">
+    <form action="./addproduct.php" method="POST">
+ <div class="user-details">
+
+ <div class="input-box">
+ <span class="details">id</span>
+ <input type="text" name="id" placeholder="ID" required>
+ </div>
+
+ <div class="input-box">
+ <span class="details">Description</span>
+ <input type="text" name="description" required>
+ </div>
+ <div class="input-box">
+ <span class="details">category</span>
+ <input type="text" name="category" required>
+ </div>
+ <div class="input-box">
+ <span class="details">stock</span>
+ <input type="text" name="stock" required>
+ </div>
+ <div class="input-box">
+ <span class="details">price</span>
+ <input type="text" name="price" required>
+ </div>
+
+ </div>
+
+ <div class="button">
+ <input type="submit" value="Update">
+ </div>
+ <div class="button">
+     <input type="reset" value="Reset">
+     </div>
+ </form>
+ </div>
+ </div>
+</body>
+</html>
